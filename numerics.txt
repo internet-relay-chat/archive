@@ -1,0 +1,673 @@
+NUM  NAME                      ORIGIN
+-------------------------------------
+001  RPL_WELCOME               RFC2812 
+002  RPL_YOURHOST              RFC2812 
+003  RPL_CREATED               RFC2812 
+004  RPL_MYINFO                RFC2812 
+005  RPL_BOUNCE                RFC2812 
+005  RPL_ISUPPORT              
+006  RPL_MAP                   Unreal 
+007  RPL_MAPEND                Unreal 
+008  RPL_SNOMASK               ircu 
+009  RPL_STATMEMTOT            ircu 
+010  RPL_BOUNCE                
+010  RPL_STATMEM               ircu 
+014  RPL_YOURCOOKIE            Hybrid? 
+015  RPL_MAP                   ircu 
+016  RPL_MAPMORE               ircu 
+017  RPL_MAPEND                ircu 
+018  RPL_MAPUSERS              InspIRCd 
+020  RPL_HELLO                 rusnet-ircd 
+030  RPL_APASSWARN_SET         ircu 
+031  RPL_APASSWARN_SECRET      ircu 
+032  RPL_APASSWARN_CLEAR       ircu 
+042  RPL_YOURID                IRCnet 
+043  RPL_SAVENICK              IRCnet 
+050  RPL_ATTEMPTINGJUNC        aircd 
+051  RPL_ATTEMPTINGREROUTE     aircd 
+105  RPL_REMOTEISUPPORT        Unreal 
+200  RPL_TRACELINK             RFC1459 
+201  RPL_TRACECONNECTING       RFC1459 
+202  RPL_TRACEHANDSHAKE        RFC1459 
+203  RPL_TRACEUNKNOWN          RFC1459 
+204  RPL_TRACEOPERATOR         RFC1459 
+205  RPL_TRACEUSER             RFC1459 
+206  RPL_TRACESERVER           RFC1459 
+207  RPL_TRACESERVICE          RFC2812 
+208  RPL_TRACENEWTYPE          RFC1459 
+209  RPL_TRACECLASS            RFC2812 
+210  RPL_TRACERECONNECT        RFC2812 
+210  RPL_STATS                 aircd 
+210  RPL_STATSHELP             Unreal 
+211  RPL_STATSLINKINFO         RFC1459 
+212  RPL_STATSCOMMANDS         RFC1459 
+213  RPL_STATSCLINE            RFC1459 
+214  RPL_STATSNLINE            RFC1459 
+215  RPL_STATSILINE            RFC1459 
+216  RPL_STATSKLINE            RFC1459 
+217  RPL_STATSQLINE            RFC1459 
+217  RPL_STATSPLINE            ircu 
+218  RPL_STATSYLINE            RFC1459 
+219  RPL_ENDOFSTATS            RFC1459 
+220  RPL_STATSPLINE            Hybrid 
+220  RPL_STATSBLINE            Bahamut, Unreal 
+220  RPL_STATSWLINE            Nefarious 
+221  RPL_UMODEIS               RFC1459 
+222  RPL_MODLIST               
+222  RPL_SQLINE_NICK           Unreal 
+222  RPL_STATSBLINE            Bahamut 
+222  RPL_STATSJLINE            ircu 
+222  RPL_CODEPAGE              rusnet-ircd 
+223  RPL_STATSELINE            Bahamut 
+223  RPL_STATSGLINE            Unreal 
+223  RPL_CHARSET               rusnet-ircd 
+224  RPL_STATSFLINE            Hybrid, Bahamut 
+224  RPL_STATSTLINE            Unreal 
+225  RPL_STATSDLINE            Hybrid 
+225  RPL_STATSCLONE            Bahamut 
+225  RPL_STATSZLINE            Bahamut 
+225  RPL_STATSELINE            Unreal 
+226  RPL_STATSCOUNT            Bahamut 
+226  RPL_STATSALINE            Hybrid 
+226  RPL_STATSNLINE            Unreal 
+227  RPL_STATSGLINE            Bahamut 
+227  RPL_STATSVLINE            Unreal 
+227  RPL_STATSBLINE            Rizon 
+228  RPL_STATSQLINE            ircu 
+228  RPL_STATSBANVER           Unreal 
+229  RPL_STATSSPAMF            Unreal 
+230  RPL_STATSEXCEPTTKL        Unreal 
+231  RPL_SERVICEINFO           RFC1459 
+232  RPL_ENDOFSERVICES         RFC1459 
+232  RPL_RULES                 Unreal 
+233  RPL_SERVICE               RFC1459 
+234  RPL_SERVLIST              RFC2812 
+235  RPL_SERVLISTEND           RFC2812 
+236  RPL_STATSVERBOSE          ircu 
+237  RPL_STATSENGINE           ircu 
+238  RPL_STATSFLINE            ircu 
+239  RPL_STATSIAUTH            IRCnet 
+240  RPL_STATSVLINE            RFC2812 
+240  RPL_STATSXLINE            AustHex 
+241  RPL_STATSLLINE            RFC1459 
+242  RPL_STATSUPTIME           RFC1459 
+243  RPL_STATSOLINE            RFC1459 
+244  RPL_STATSHLINE            RFC1459 
+245  RPL_STATSSLINE            Bahamut, IRCnet, Hybrid 
+245  RPL_STATSTLINE            Hybrid? 
+246  RPL_STATSPING             RFC2812 
+246  RPL_STATSSERVICE          Hybrid 
+246  RPL_STATSTLINE            ircu 
+246  RPL_STATSULINE            Hybrid 
+247  RPL_STATSBLINE            RFC2812 
+247  RPL_STATSXLINE            Hybrid, PTlink, Unreal 
+247  RPL_STATSGLINE            ircu 
+248  RPL_STATSULINE            ircu 
+248  RPL_STATSDEFINE           IRCnet 
+249  RPL_STATSULINE            
+249  RPL_STATSDEBUG            Hybrid 
+250  RPL_STATSDLINE            RFC2812 
+250  RPL_STATSCONN             ircu, Unreal 
+251  RPL_LUSERCLIENT           RFC1459 
+252  RPL_LUSEROP               RFC1459 
+253  RPL_LUSERUNKNOWN          RFC1459 
+254  RPL_LUSERCHANNELS         RFC1459 
+255  RPL_LUSERME               RFC1459 
+256  RPL_ADMINME               RFC1459 
+257  RPL_ADMINLOC1             RFC1459 
+258  RPL_ADMINLOC2             RFC1459 
+259  RPL_ADMINEMAIL            RFC1459 
+261  RPL_TRACELOG              RFC1459 
+262  RPL_TRACEPING             
+262  RPL_TRACEEND              RFC2812 
+263  RPL_TRYAGAIN              RFC2812 
+264  RPL_USINGSSL              rusnet-ircd 
+265  RPL_LOCALUSERS            aircd, Hybrid, Bahamut 
+266  RPL_GLOBALUSERS           aircd, Hybrid, Bahamut 
+267  RPL_START_NETSTAT         aircd 
+268  RPL_NETSTAT               aircd 
+269  RPL_END_NETSTAT           aircd 
+270  RPL_PRIVS                 ircu 
+270  RPL_MAPUSERS              InspIRCd 2.0 
+271  RPL_SILELIST              ircu 
+272  RPL_ENDOFSILELIST         ircu 
+273  RPL_NOTIFY                aircd 
+274  RPL_ENDNOTIFY             aircd 
+274  RPL_STATSDELTA            IRCnet 
+275  RPL_STATSDLINE            ircu, Ultimate 
+275  RPL_USINGSSL              Bahamut 
+276  RPL_WHOISCERTFP           oftc-hybrid 
+276  RPL_STATSRLINE            ircu 
+276  RPL_VCHANEXIST            Hybrid 
+277  RPL_VCHANLIST             Hybrid 
+278  RPL_VCHANHELP             Hybrid 7.0? 
+280  RPL_GLIST                 ircu 
+281  RPL_ENDOFGLIST            ircu 
+281  RPL_ACCEPTLIST            
+282  RPL_ENDOFACCEPT           
+282  RPL_JUPELIST              ircu 
+283  RPL_ALIST                 
+283  RPL_ENDOFJUPELIST         ircu 
+284  RPL_ENDOFALIST            
+284  RPL_FEATURE               ircu 
+285  RPL_GLIST_HASH            
+285  RPL_CHANINFO_HANDLE       aircd 
+285  RPL_NEWHOSTIS             QuakeNet 
+286  RPL_CHANINFO_USERS        aircd 
+286  RPL_CHKHEAD               QuakeNet 
+287  RPL_CHANINFO_CHOPS        aircd 
+287  RPL_CHANUSER              QuakeNet 
+288  RPL_CHANINFO_VOICES       aircd 
+288  RPL_PATCHHEAD             QuakeNet 
+289  RPL_CHANINFO_AWAY         aircd 
+289  RPL_PATCHCON              QuakeNet 
+290  RPL_CHANINFO_OPERS        aircd 
+290  RPL_HELPHDR               Unreal 
+290  RPL_DATASTR               QuakeNet 
+291  RPL_CHANINFO_BANNED       aircd 
+291  RPL_HELPOP                Unreal 
+291  RPL_ENDOFCHECK            QuakeNet 
+292  RPL_CHANINFO_BANS         aircd 
+292  RPL_HELPTLR               Unreal 
+292  ERR_SEARCHNOMATCH         Nefarious 
+293  RPL_CHANINFO_INVITE       aircd 
+293  RPL_HELPHLP               Unreal 
+294  RPL_CHANINFO_INVITES      aircd 
+294  RPL_HELPFWD               Unreal 
+295  RPL_CHANINFO_KICK         aircd 
+295  RPL_HELPIGN               Unreal 
+296  RPL_CHANINFO_KICKS        aircd 
+299  RPL_END_CHANINFO          aircd 
+300  RPL_NONE                  RFC1459 
+301  RPL_AWAY                  RFC1459 
+302  RPL_USERHOST              RFC1459 
+303  RPL_ISON                  RFC1459 
+304  RPL_TEXT                  irc2? 
+305  RPL_UNAWAY                RFC1459 
+306  RPL_NOWAWAY               RFC1459 
+307  RPL_USERIP                
+307  RPL_WHOISREGNICK          Bahamut, Unreal 
+307  RPL_SUSERHOST             AustHex 
+308  RPL_NOTIFYACTION          aircd 
+308  RPL_WHOISADMIN            Bahamut 
+308  RPL_RULESSTART            Unreal 
+309  RPL_NICKTRACE             aircd 
+309  RPL_WHOISSADMIN           Bahamut 
+309  RPL_ENDOFRULES            Unreal 
+309  RPL_WHOISHELPER           AustHex 
+309  RPL_WHOISSERVICE          oftc-hybrid 
+310  RPL_WHOISSVCMSG           Bahamut 
+310  RPL_WHOISHELPOP           Unreal 
+310  RPL_WHOISSERVICE          AustHex 
+311  RPL_WHOISUSER             RFC1459 
+312  RPL_WHOISSERVER           RFC1459 
+313  RPL_WHOISOPERATOR         RFC1459 
+314  RPL_WHOWASUSER            RFC1459 
+315  RPL_ENDOFWHO              RFC1459 
+316  RPL_WHOISPRIVDEAF         Nefarious 
+316  RPL_WHOISCHANOP           RFC1459 
+317  RPL_WHOISIDLE             RFC1459 
+318  RPL_ENDOFWHOIS            RFC1459 
+319  RPL_WHOISCHANNELS         RFC1459 
+320  RPL_WHOISVIRT             AustHex 
+320  RPL_WHOIS_HIDDEN          Anothernet 
+320  RPL_WHOISSPECIAL          Unreal 
+321  RPL_LISTSTART             RFC1459 
+322  RPL_LIST                  RFC1459 
+323  RPL_LISTEND               RFC1459 
+324  RPL_CHANNELMODEIS         RFC1459 
+325  RPL_UNIQOPIS              RFC2812 
+325  RPL_CHANNELPASSIS         
+325  RPL_WHOISWEBIRC           Nefarious 
+325  RPL_CHANNELMLOCKIS        sorircd 
+326  RPL_NOCHANPASS            
+327  RPL_CHPASSUNKNOWN         
+327  RPL_WHOISHOST             rusnet-ircd 
+328  RPL_CHANNEL_URL           Bahamut, AustHex 
+329  RPL_CREATIONTIME          Bahamut 
+330  RPL_WHOWAS_TIME           
+330  RPL_WHOISACCOUNT          ircu 
+331  RPL_NOTOPIC               RFC1459 
+332  RPL_TOPIC                 RFC1459 
+333  RPL_TOPICWHOTIME          ircu 
+334  RPL_LISTUSAGE             ircu 
+334  RPL_COMMANDSYNTAX         Bahamut 
+334  RPL_LISTSYNTAX            Unreal 
+335  RPL_WHOISBOT              Unreal 
+335  RPL_WHOISTEXT             Hybrid 
+335  RPL_WHOISACCOUNTONLY      Nefarious 
+336  RPL_INVITELIST            Hybrid 
+336  RPL_WHOISBOT              Nefarious 
+337  RPL_ENDOFINVITELIST       Hybrid 
+337  RPL_WHOISTEXT             Hybrid? 
+338  RPL_CHANPASSOK            
+338  RPL_WHOISACTUALLY         ircu, Bahamut 
+339  RPL_BADCHANPASS           
+339  RPL_WHOISMARKS            Nefarious 
+340  RPL_USERIP                ircu 
+341  RPL_INVITING              RFC1459 
+342  RPL_SUMMONING             RFC1459 
+343  RPL_WHOISKILL             Nefarious 
+344  RPL_WHOISCOUNTRY          InspIRCd 2.0 
+344  RPL_WHOISCOUNTRY          InspIRCd 3.0 
+344  RPL_REOPLIST              IRCnet 
+345  RPL_INVITED               GameSurge 
+345  RPL_ENDOFREOPLIST         IRCnet 
+346  RPL_INVITELIST            RFC2812 
+347  RPL_ENDOFINVITELIST       RFC2812 
+348  RPL_EXCEPTLIST            RFC2812 
+349  RPL_ENDOFEXCEPTLIST       RFC2812 
+350  RPL_WHOISGATEWAY          InspIRCd 3.0 
+351  RPL_VERSION               RFC1459 
+352  RPL_WHOREPLY              RFC1459 
+353  RPL_NAMREPLY              RFC1459 
+354  RPL_WHOSPCRPL             ircu 
+355  RPL_NAMREPLY_             QuakeNet 
+357  RPL_MAP                   AustHex 
+358  RPL_MAPMORE               AustHex 
+359  RPL_MAPEND                AustHex 
+360  RPL_WHOWASREAL            Charybdis 
+361  RPL_KILLDONE              RFC1459 
+362  RPL_CLOSING               RFC1459 
+363  RPL_CLOSEEND              RFC1459 
+364  RPL_LINKS                 RFC1459 
+365  RPL_ENDOFLINKS            RFC1459 
+366  RPL_ENDOFNAMES            RFC1459 
+367  RPL_BANLIST               RFC1459 
+368  RPL_ENDOFBANLIST          RFC1459 
+369  RPL_ENDOFWHOWAS           RFC1459 
+371  RPL_INFO                  RFC1459 
+372  RPL_MOTD                  RFC1459 
+373  RPL_INFOSTART             RFC1459 
+374  RPL_ENDOFINFO             RFC1459 
+375  RPL_MOTDSTART             RFC1459 
+376  RPL_ENDOFMOTD             RFC1459 
+377  RPL_KICKEXPIRED           aircd 
+377  RPL_SPAM                  AustHex 
+378  RPL_BANEXPIRED            aircd 
+378  RPL_WHOISHOST             Unreal 
+378  RPL_MOTD                  AustHex 
+379  RPL_KICKLINKED            aircd 
+379  RPL_WHOISMODES            Unreal 
+379  RPL_WHOWASIP              InspIRCd 2.0 
+380  RPL_BANLINKED             aircd 
+380  RPL_YOURHELPER            AustHex 
+381  RPL_YOUREOPER             RFC1459 
+382  RPL_REHASHING             RFC1459 
+383  RPL_YOURESERVICE          RFC2812 
+384  RPL_MYPORTIS              RFC1459 
+385  RPL_NOTOPERANYMORE        AustHex, Hybrid, Unreal 
+386  RPL_QLIST                 Unreal 
+386  RPL_IRCOPS                Ultimate 
+386  RPL_IRCOPSHEADER          Nefarious 
+386  RPL_RSACHALLENGE          Hybrid 
+387  RPL_ENDOFQLIST            Unreal 
+387  RPL_ENDOFIRCOPS           Ultimate 
+387  RPL_IRCOPS                Nefarious 
+388  RPL_ALIST                 Unreal 
+388  RPL_ENDOFIRCOPS           Nefarious 
+389  RPL_ENDOFALIST            Unreal 
+391  RPL_TIME                  RFC1459 
+391  RPL_TIME                  ircu 
+391  RPL_TIME                  bdq-ircd 
+391  RPL_TIME                  
+392  RPL_USERSSTART            RFC1459 
+393  RPL_USERS                 RFC1459 
+394  RPL_ENDOFUSERS            RFC1459 
+395  RPL_NOUSERS               RFC1459 
+396  RPL_VISIBLEHOST           Hybrid 
+399  RPL_CLONES                InspIRCd 3.0 
+400  ERR_UNKNOWNERROR          
+401  ERR_NOSUCHNICK            RFC1459 
+402  ERR_NOSUCHSERVER          RFC1459 
+403  ERR_NOSUCHCHANNEL         RFC1459 
+404  ERR_CANNOTSENDTOCHAN      RFC1459 
+405  ERR_TOOMANYCHANNELS       RFC1459 
+406  ERR_WASNOSUCHNICK         RFC1459 
+407  ERR_TOOMANYTARGETS        RFC1459 
+408  ERR_NOSUCHSERVICE         RFC2812 
+408  ERR_NOCOLORSONCHAN        Bahamut 
+408  ERR_NOCTRLSONCHAN         Hybrid 
+409  ERR_NOORIGIN              RFC1459 
+410  ERR_INVALIDCAPCMD         Undernet? 
+411  ERR_NORECIPIENT           RFC1459 
+412  ERR_NOTEXTTOSEND          RFC1459 
+413  ERR_NOTOPLEVEL            RFC1459 
+414  ERR_WILDTOPLEVEL          RFC1459 
+415  ERR_BADMASK               RFC2812 
+416  ERR_TOOMANYMATCHES        IRCnet 
+416  ERR_QUERYTOOLONG          ircu 
+417  ERR_INPUTTOOLONG          ircu 
+419  ERR_LENGTHTRUNCATED       aircd 
+420  ERR_AMBIGUOUSCOMMAND      InspIRCd 
+421  ERR_UNKNOWNCOMMAND        RFC1459 
+422  ERR_NOMOTD                RFC1459 
+423  ERR_NOADMININFO           RFC1459 
+424  ERR_FILEERROR             RFC1459 
+425  ERR_NOOPERMOTD            Unreal 
+429  ERR_TOOMANYAWAY           Bahamut 
+430  ERR_EVENTNICKCHANGE       AustHex 
+431  ERR_NONICKNAMEGIVEN       RFC1459 
+432  ERR_ERRONEUSNICKNAME      RFC1459 
+433  ERR_NICKNAMEINUSE         RFC1459 
+434  ERR_SERVICENAMEINUSE      AustHex? 
+434  ERR_NORULES               Unreal, Ultimate 
+435  ERR_SERVICECONFUSED       Unreal 
+435  ERR_BANONCHAN             Bahamut 
+436  ERR_NICKCOLLISION         RFC1459 
+437  ERR_UNAVAILRESOURCE       RFC2812 
+437  ERR_BANNICKCHANGE         ircu 
+438  ERR_NICKTOOFAST           ircu 
+438  ERR_DEAD                  IRCnet 
+439  ERR_TARGETTOOFAST         ircu 
+440  ERR_SERVICESDOWN          Bahamut, Unreal 
+441  ERR_USERNOTINCHANNEL      RFC1459 
+442  ERR_NOTONCHANNEL          RFC1459 
+443  ERR_USERONCHANNEL         RFC1459 
+444  ERR_NOLOGIN               RFC1459 
+445  ERR_SUMMONDISABLED        RFC1459 
+446  ERR_USERSDISABLED         RFC1459 
+447  ERR_NONICKCHANGE          Unreal 
+448  ERR_FORBIDDENCHANNEL      Unreal 
+449  ERR_NOTIMPLEMENTED        Undernet 
+451  ERR_NOTREGISTERED         RFC1459 
+452  ERR_IDCOLLISION           
+453  ERR_NICKLOST              
+455  ERR_HOSTILENAME           Unreal 
+456  ERR_ACCEPTFULL            
+457  ERR_ACCEPTEXIST           
+458  ERR_ACCEPTNOT             
+459  ERR_NOHIDING              Unreal 
+460  ERR_NOTFORHALFOPS         Unreal 
+461  ERR_NEEDMOREPARAMS        RFC1459 
+462  ERR_ALREADYREGISTERED     RFC1459 
+463  ERR_NOPERMFORHOST         RFC1459 
+464  ERR_PASSWDMISMATCH        RFC1459 
+465  ERR_YOUREBANNEDCREEP      RFC1459 
+466  ERR_YOUWILLBEBANNED       RFC1459 
+467  ERR_KEYSET                RFC1459 
+468  ERR_INVALIDUSERNAME       ircu 
+468  ERR_ONLYSERVERSCANCHANGE   Bahamut, Unreal 
+468  ERR_NOCODEPAGE            rusnet-ircd 
+469  ERR_LINKSET               Unreal 
+470  ERR_LINKCHANNEL           Unreal 
+470  ERR_KICKEDFROMCHAN        aircd 
+470  ERR_7BIT                  rusnet-ircd 
+471  ERR_CHANNELISFULL         RFC1459 
+472  ERR_UNKNOWNMODE           RFC1459 
+473  ERR_INVITEONLYCHAN        RFC1459 
+474  ERR_BANNEDFROMCHAN        RFC1459 
+475  ERR_BADCHANNELKEY         RFC1459 
+476  ERR_BADCHANMASK           RFC2812 
+477  ERR_NOCHANMODES           RFC2812 
+477  ERR_NEEDREGGEDNICK        Bahamut, ircu, Unreal 
+478  ERR_BANLISTFULL           RFC2812 
+479  ERR_BADCHANNAME           Hybrid 
+479  ERR_LINKFAIL              Unreal 
+479  ERR_NOCOLOR               rusnet-ircd 
+480  ERR_NOULINE               AustHex 
+480  ERR_CANNOTKNOCK           Unreal 
+480  ERR_THROTTLE              Ratbox 
+480  ERR_SSLONLYCHAN           Hybrid 
+480  ERR_NOWALLOP              rusnet-ircd 
+481  ERR_NOPRIVILEGES          RFC1459 
+482  ERR_CHANOPRIVSNEEDED      RFC1459 
+483  ERR_CANTKILLSERVER        RFC1459 
+484  ERR_RESTRICTED            RFC2812 
+484  ERR_ISCHANSERVICE         Undernet 
+484  ERR_DESYNC                Bahamut, Hybrid, PTlink 
+484  ERR_ATTACKDENY            Unreal 
+485  ERR_UNIQOPRIVSNEEDED      RFC2812 
+485  ERR_KILLDENY              Unreal 
+485  ERR_CANTKICKADMIN         PTlink 
+485  ERR_ISREALSERVICE         QuakeNet 
+485  ERR_CHANBANREASON         Hybrid 
+485  ERR_BANNEDNICK            Ratbox 
+486  ERR_NONONREG              Unreal? 
+486  ERR_RLINED                rusnet-ircd 
+486  ERR_HTMDISABLED           Unreal 
+487  ERR_CHANTOORECENT         IRCnet 
+487  ERR_MSGSERVICES           Bahamut 
+487  ERR_NOTFORUSERS           Unreal? 
+487  ERR_NONONSSL              ChatIRCd 
+488  ERR_TSLESSCHAN            IRCnet 
+488  ERR_HTMDISABLED           Unreal? 
+488  ERR_NOSSL                 Bahamut 
+489  ERR_SECUREONLYCHAN        Unreal 
+489  ERR_VOICENEEDED           Undernet 
+490  ERR_ALLMUSTSSL            InspIRCd 
+490  ERR_NOSWEAR               Unreal 
+491  ERR_NOOPERHOST            RFC1459 
+492  ERR_NOSERVICEHOST         RFC1459 
+492  ERR_NOCTCP                Hybrid / Unreal? 
+492  ERR_CANNOTSENDTOUSER      Charybdis? 
+493  ERR_NOSHAREDCHAN          Bahamut 
+493  ERR_NOFEATURE             ircu 
+494  ERR_BADFEATVALUE          ircu 
+494  ERR_OWNMODE               Bahamut, charybdis? 
+495  ERR_BADLOGTYPE            ircu 
+495  ERR_DELAYREJOIN           InspIRCd 2.0 
+496  ERR_BADLOGSYS             ircu 
+497  ERR_BADLOGVALUE           ircu 
+498  ERR_ISOPERLCHAN           ircu 
+499  ERR_CHANOWNPRIVNEEDED     Unreal 
+500  ERR_TOOMANYJOINS          Unreal? 
+500  ERR_NOREHASHPARAM         rusnet-ircd 
+500  ERR_CANNOTSETMODER        InspIRCd 
+501  ERR_UMODEUNKNOWNFLAG      RFC1459 
+501  ERR_UNKNOWNSNOMASK        InspIRCd 
+502  ERR_USERSDONTMATCH        RFC1459 
+503  ERR_GHOSTEDCLIENT         Hybrid 
+503  ERR_VWORLDWARN            AustHex 
+504  ERR_USERNOTONSERV         
+511  ERR_SILELISTFULL          ircu 
+512  ERR_TOOMANYWATCH          Bahamut 
+512  ERR_NOSUCHGLINE           ircu 
+513  ERR_BADPING               ircu 
+514  ERR_TOOMANYDCC            Bahamut 
+514  ERR_NOSUCHJUPE            irch 
+514  ERR_INVALID_ERROR         ircu 
+515  ERR_BADEXPIRE             ircu 
+516  ERR_DONTCHEAT             ircu 
+517  ERR_DISABLED              ircu 
+518  ERR_NOINVITE              Unreal 
+518  ERR_LONGMASK              ircu 
+519  ERR_ADMONLY               Unreal 
+519  ERR_TOOMANYUSERS          ircu 
+520  ERR_OPERONLY              Unreal 
+520  ERR_MASKTOOWIDE           ircu 
+520  ERR_WHOTRUNC              AustHex 
+521  ERR_LISTSYNTAX            Bahamut 
+521  ERR_NOSUCHGLINE           Nefarious 
+522  ERR_WHOSYNTAX             Bahamut 
+523  ERR_WHOLIMEXCEED          Bahamut 
+524  ERR_QUARANTINED           ircu 
+524  ERR_OPERSPVERIFY          Unreal 
+524  ERR_HELPNOTFOUND          Hybrid 
+525  ERR_INVALIDKEY            ircu 
+525  ERR_REMOTEPFX             CAPAB USERCMDPFX 
+526  ERR_PFXUNROUTABLE         CAPAB USERCMDPFX 
+531  ERR_CANTSENDTOUSER        InspIRCd 
+550  ERR_BADHOSTMASK           QuakeNet 
+551  ERR_HOSTUNAVAIL           QuakeNet 
+552  ERR_USINGSLINE            QuakeNet 
+553  ERR_STATSSLINE            QuakeNet 
+560  ERR_NOTLOWEROPLEVEL       ircu 
+561  ERR_NOTMANAGER            ircu 
+562  ERR_CHANSECURED           ircu 
+563  ERR_UPASSSET              ircu 
+564  ERR_UPASSNOTSET           ircu 
+566  ERR_NOMANAGER             ircu 
+567  ERR_UPASS_SAME_APASS      ircu 
+568  ERR_LASTERROR             ircu 
+568  RPL_NOOMOTD               Nefarious 
+597  RPL_REAWAY                Unreal 
+598  RPL_GONEAWAY              Unreal 
+599  RPL_NOTAWAY               Unreal 
+600  RPL_LOGON                 Bahamut, Unreal 
+601  RPL_LOGOFF                Bahamut, Unreal 
+602  RPL_WATCHOFF              Bahamut, Unreal 
+603  RPL_WATCHSTAT             Bahamut, Unreal 
+604  RPL_NOWON                 Bahamut, Unreal 
+605  RPL_NOWOFF                Bahamut, Unreal 
+606  RPL_WATCHLIST             Bahamut, Unreal 
+607  RPL_ENDOFWATCHLIST        Bahamut, Unreal 
+608  RPL_WATCHCLEAR            Ultimate 
+609  RPL_NOWISAWAY             Unreal 
+610  RPL_MAPMORE               Unreal 
+610  RPL_ISOPER                Ultimate 
+611  RPL_ISLOCOP               Ultimate 
+612  RPL_ISNOTOPER             Ultimate 
+613  RPL_ENDOFISOPER           Ultimate 
+615  RPL_MAPMORE               PTlink 
+615  RPL_WHOISMODES            Ultimate 
+616  RPL_WHOISHOST             Ultimate 
+617  RPL_WHOISSSLFP            Nefarious 
+617  RPL_DCCSTATUS             Bahamut 
+617  RPL_WHOISBOT              Ultimate 
+618  RPL_DCCLIST               Bahamut 
+619  RPL_ENDOFDCCLIST          Bahamut 
+619  RPL_WHOWASHOST            Ultimate 
+620  RPL_DCCINFO               Bahamut 
+620  RPL_RULESSTART            Ultimate 
+621  RPL_RULES                 Ultimate 
+622  RPL_ENDOFRULES            Ultimate 
+623  RPL_MAPMORE               Ultimate 
+624  RPL_OMOTDSTART            Ultimate 
+625  RPL_OMOTD                 Ultimate 
+626  RPL_ENDOFOMOTD            Ultimate 
+630  RPL_SETTINGS              Ultimate 
+631  RPL_ENDOFSETTINGS         Ultimate 
+640  RPL_DUMPING               Unreal 
+641  RPL_DUMPRPL               Unreal 
+642  RPL_EODUMP                Unreal 
+650  RPL_SYNTAX                InspIRCd 3.0 
+651  RPL_CHANNELSMSG           InspIRCd 3.0 
+652  RPL_WHOWASIP              InspIRCd 3.0 
+653  RPL_UNINVITED             InspIRCd 3.0 
+659  RPL_SPAMCMDFWD            Unreal 
+670  RPL_STARTTLS              IRCv3 
+671  RPL_WHOISSECURE           Unreal 
+672  RPL_UNKNOWNMODES          Ithildin 
+672  RPL_WHOISREALIP           Rizon 
+673  RPL_CANNOTSETMODES        Ithildin 
+674  RPL_WHOISYOURID           ChatIRCd 
+690  ERR_REDIRECT              InspIRCd 
+691  ERR_STARTTLS              IRCv3 
+696  ERR_INVALIDMODEPARAM      InspIRCd 3.0 
+697  ERR_LISTMODEALREADYSET    InspIRCd 3.0 
+698  ERR_LISTMODENOTSET        InspIRCd 3.0 
+700  RPL_COMMANDS              InspIRCd 3.0 
+701  RPL_COMMANDSEND           InspIRCd 3.0 
+702  RPL_MODLIST               RatBox 
+702  RPL_COMMANDS              InspIRCd 2.0 
+703  RPL_ENDOFMODLIST          RatBox 
+703  RPL_COMMANDSEND           InspIRCd 2.0 
+704  RPL_HELPSTART             RatBox 
+705  RPL_HELPTXT               RatBox 
+706  RPL_ENDOFHELP             RatBox 
+707  ERR_TARGCHANGE            RatBox 
+708  RPL_ETRACEFULL            RatBox 
+709  RPL_ETRACE                RatBox 
+710  RPL_KNOCK                 RatBox 
+711  RPL_KNOCKDLVR             RatBox 
+712  ERR_TOOMANYKNOCK          RatBox 
+713  ERR_CHANOPEN              RatBox 
+714  ERR_KNOCKONCHAN           RatBox 
+715  ERR_KNOCKDISABLED         RatBox 
+715  ERR_TOOMANYINVITE         Hybrid 
+715  RPL_INVITETHROTTLE        Rizon 
+716  RPL_TARGUMODEG            RatBox 
+717  RPL_TARGNOTIFY            RatBox 
+718  RPL_UMODEGMSG             RatBox 
+720  RPL_OMOTDSTART            RatBox 
+721  RPL_OMOTD                 RatBox 
+722  RPL_ENDOFOMOTD            RatBox 
+723  ERR_NOPRIVS               RatBox 
+724  RPL_TESTMASK              RatBox 
+725  RPL_TESTLINE              RatBox 
+726  RPL_NOTESTLINE            RatBox 
+727  RPL_TESTMASKGECOS         RatBox 
+728  RPL_QUIETLIST             Charybdis 
+729  RPL_ENDOFQUIETLIST        Charybdis 
+730  RPL_MONONLINE             RatBox 
+731  RPL_MONOFFLINE            RatBox 
+732  RPL_MONLIST               RatBox 
+733  RPL_ENDOFMONLIST          RatBox 
+734  ERR_MONLISTFULL           RatBox 
+740  RPL_RSACHALLENGE2         RatBox 
+741  RPL_ENDOFRSACHALLENGE2    RatBox 
+742  ERR_MLOCKRESTRICTED       Charybdis 
+743  ERR_INVALIDBAN            Charybdis 
+744  ERR_TOPICLOCK             InspIRCd? 
+750  RPL_SCANMATCHED           RatBox 
+751  RPL_SCANUMODES            RatBox 
+759  RPL_ETRACEEND             irc2.11 
+760  RPL_WHOISKEYVALUE         IRCv3 
+761  RPL_KEYVALUE              IRCv3 
+762  RPL_METADATAEND           IRCv3 
+764  ERR_METADATALIMIT         IRCv3 
+765  ERR_TARGETINVALID         IRCv3 
+766  ERR_NOMATCHINGKEY         IRCv3 
+767  ERR_KEYINVALID            IRCv3 
+768  ERR_KEYNOTSET             IRCv3 
+769  ERR_KEYNOPERMISSION       IRCv3 
+771  RPL_XINFO                 Ithildin 
+773  RPL_XINFOSTART            Ithildin 
+774  RPL_XINFOEND              Ithildin 
+801  RPL_STATSCOUNTRY          InspIRCd 3.0 
+802  RPL_CHECK                 InspIRCd 3.0 
+803  RPL_OTHERUMODEIS          InspIRCd 3.0 
+804  RPL_OTHERSNOMASKIS        InspIRCd 3.0 
+900  RPL_LOGGEDIN              Charybdis/Atheme, IRCv3 
+901  RPL_LOGGEDOUT             Charybdis/Atheme, IRCv3 
+902  ERR_NICKLOCKED            Charybdis/Atheme, IRCv3 
+903  RPL_SASLSUCCESS           Charybdis/Atheme, IRCv3 
+904  ERR_SASLFAIL              Charybdis/Atheme, IRCv3 
+905  ERR_SASLTOOLONG           Charybdis/Atheme, IRCv3 
+906  ERR_SASLABORTED           Charybdis/Atheme, IRCv3 
+907  ERR_SASLALREADY           Charybdis/Atheme, IRCv3 
+908  RPL_SASLMECHS             Charybdis/Atheme, IRCv3 
+910  RPL_ACCESSLIST            InspIRCd 
+911  RPL_ENDOFACCESSLIST       InspIRCd 
+926  ERR_BADCHANNEL            InspIRCd 
+936  ERR_WORDFILTERED          InspIRCd 
+937  ERR_ALREADYCHANFILTERED   InspIRCd 2.0 
+938  ERR_NOSUCHCHANFILTER      InspIRCd 2.0 
+939  ERR_CHANFILTERFULL        InspIRCd 2.0 
+940  RPL_ENDOFSPAMFILTER       InspIRCd 
+941  RPL_SPAMFILTER            InspIRCd 
+942  ERR_INVALIDWATCHNICK      InspIRCd 
+944  RPL_IDLETIMESET           InspIRCd 
+945  RPL_NICKLOCKOFF           InspIRCd 
+946  ERR_NICKNOTLOCKED         InspIRCd 
+947  RPL_NICKLOCKON            InspIRCd 
+948  ERR_INVALIDIDLETIME       InspIRCd 
+950  RPL_UNSILENCED            InspIRCd 
+951  RPL_SILENCED              InspIRCd 
+952  ERR_SILENCE               InspIRCd 
+953  RPL_ENDOFEXEMPTIONLIST    InspIRCd 
+954  RPL_EXEMPTIONLIST         InspIRCd 
+960  RPL_ENDOFPROPLIST         InspIRCd 
+961  RPL_PROPLIST              InspIRCd 
+972  ERR_CANNOTDOCOMMAND       Unreal 
+972  ERR_CANTUNLOADMODULE      InspIRCd 
+973  RPL_UNLOADEDMODULE        InspIRCd 
+974  ERR_CANNOTCHANGECHANMODE  Unreal 
+974  ERR_CANTLOADMODULE        InspIRCd 
+975  RPL_LOADEDMODULE          InspIRCd 
+975  ERR_LASTERROR             Nefarious 
+988  RPL_SERVLOCKON            InspIRCd 
+989  RPL_SERVLOCKOFF           InspIRCd 
+990  RPL_DCCALLOWSTART         InspIRCd 
+991  RPL_DCCALLOWLIST          InspIRCd 
+992  RPL_DCCALLOWEND           InspIRCd 
+993  RPL_DCCALLOWTIMED         InspIRCd 
+994  RPL_DCCALLOWPERMANENT     InspIRCd 
+995  RPL_DCCALLOWREMOVED       InspIRCd 
+996  ERR_DCCALLOWINVALID       InspIRCd 
+997  RPL_DCCALLOWEXPIRED       InspIRCd 
+998  ERR_UNKNOWNDCCALLOWCMD    InspIRCd 
+998  RPL_DCCALLOWHELP          InspIRCd 
+999  RPL_ENDOFDCCALLOWHELP     InspIRCd 2.0 
+999  ERR_NUMERIC_ERR           Bahamut 
