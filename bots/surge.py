@@ -33,12 +33,12 @@ import time
 
 class config:
 	class connection:
-		server    = 'irc.server.com'
+		server    = 'irc.libera.chat'
 		port      = 6667
 		ipv6      = False
 		ssl       = False
 		password  = None
-		channel   = '#chats'
+		channel   = '#weechat-live'
 		key       = None
 
 	class attacks:
