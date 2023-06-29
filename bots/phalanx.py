@@ -146,7 +146,7 @@ class clone:
 								for item in settings.access:
 									await self.sendmsg(target, color(item, yellow))
 							else:
-								await self.error('invalid command', 'usage: .access <+/-><host>')
+								await self.error(chan, 'invalid command', 'usage: .access <+/-><host>')
 					if is_access(ident):
 						if args[0] == '.create' and self.identity['nick'] == 'phalanx' and len(args) >= 2:
 							if len(self.clones) < 500:
@@ -175,7 +175,7 @@ class clone:
 						elif args[0] == '.raw' and len(args) >= 3:
 							target = args[1]
 							if target == 'phalanx' and not is_admin(ident):
-								self.error('yeah right...')
+								self.error(chan 'yeah right...')
 							data   = ' '.join(args[2:])
 							if '#5000' not in data:
 								if target == self.identity['nick'] or (target == '*' and is_admin(ident)):
