@@ -8,10 +8,10 @@ import sys
 import time
 
 class settings:
-	admin     = 'acidvegas!*@*' # change me
+	admin     = 'acidvegas!~stillfree@most.dangerous.motherfuck' # Can use wildcards (Must be in nick!user@host format)
 	access    = [admin,]
 	oper_user = 'phalanx'
-	oper_pass = 'changeme'
+	oper_pass = 'simps0nsfAn420'
 
 # Formatting Control Characters / Color Codes
 bold        = '\x02'
@@ -148,13 +148,20 @@ class clone:
 							else:
 								await self.error('invalid command', 'usage: .access <+/-><host>')
 					if is_access(ident):
-						if args[0] == '.create' and self.identity['nick'] == 'phalanx' and len(args) >= 6:
+						if args[0] == '.create' and self.identity['nick'] == 'phalanx' and len(args) >= 2:
 							if len(self.clones) < 500:
 								chan = args[1]
-								nick = rndnick() if args[2] == '%r' else args[2]
-								user = rndnick() if args[3] == '%r' else args[3]
-								host = rndip()   if args[4] == '%r' else args[4]
-								real = rndnick   if args[5] == '%r' else ' '.join(args[5:])
+								if len(args) >= 6:
+									nick = rndnick() if args[2] == '%r' else args[2]
+									user = rndnick() if args[3] == '%r' else args[3]
+									host = rndip()   if args[4] == '%r' else args[4]
+									real = rndnick() if args[5] == '%r' else ' '.join(args[5:])
+								elif len(args) == 2:
+									ident = random.choice(idents).split()
+									nick = ident[0]
+									user = ident[1]
+									host = ident[2]
+									real = ' '.join(ident[3:])
 								if nick != 'phalanx':
 									options = {'chan':chan,'nick':nick,'user':user,'host':host,'real':real}
 									self.clones[random.randint(1000,9999)] = asyncio.create_task(clone(identity=options).run())
@@ -179,4 +186,5 @@ class clone:
 				pass
 
 # Main
+idents = open('idents.txt').readlines()
 asyncio.run(clone().run())
