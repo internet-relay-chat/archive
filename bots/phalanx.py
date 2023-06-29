@@ -131,7 +131,7 @@ class clone:
 					msg    = ' '.join(args[3:])[1:]
 					args   = msg.split()
 					if is_admin(ident):
-						if args[0] == '.access' and len(args) == 2:
+						if args[0] == '.access' and self.identity['nick'] == 'phalanx' and len(args) == 2:
 							action = args[1][:1]
 							host   = args[1][1:]
 							if action == '+':
