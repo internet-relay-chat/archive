@@ -1,17 +1,13 @@
 #!/usr/bin/env python
 # Tail Bot for syn (cause fuck gh0st and his skid scripts) - Developed by acidvegas in Python (https://git.acid.vegas/archive)
 
-'''
-WOAH LOOK NO 3RD PARTY LIBRARIES
-WOW NO USELESS FUNCTIONS JUST THAT PASS AND ARE DECLARED FOR NO REASON
-WOW SIMPLE CODE WRITTEN THE CORRECT WAY
-'''
-
 import asyncio
+import aiofiles
 import pathlib
 import ssl
 import time
 import urllib.request
+import os
 
 class connection:
 	server  = 'irc.supernets.org'
@@ -19,7 +15,7 @@ class connection:
 	ipv6    = False
 	ssl     = True
 	vhost   = None
-	channel = '#honeypot'
+	channel = '#dev'
 	key     = None
 	modes   = None
 
@@ -68,15 +64,17 @@ class Bot():
 		if not os.path.exists(FIFO_PATH):
 			os.mkfifo(FIFO_PATH)
 		while True:
-			with open(FIFO_PATH) as fifo:
+			async with aiofiles.open(FIFO_PATH) as fifo:
 				while True:
 					try:
-						self.sendmsg(connection.channel, FIFO_PATH.read_text())
+						await self.sendmsg(connection.channel, FIFO_PATH.read_text())
 					except Exception as ex:
 						try:
-							self.irc_error(connection.channel, 'Error occured in the loop_tail function!', ex)
+							await self.irc_error(connection.channel, 'Error occured in the loop_tail function!', ex)
+							break
 						except:
 							error('Fatal error occured in the loop_tail functions!', ex)
+							break
 
 	async def connect(self):
 		while True:
@@ -89,7 +87,7 @@ class Bot():
 					'family'     : 10 if connection.ipv6 else 2,
 					'local_addr' : connection.vhost
 				}
-				self.reader, self.writer = await asyncio.wait_for(asyncio.open_connection(**options), 300)
+				self.reader, self.writer = await asyncio.wait_for(asyncio.open_connection(**options), 30)
 				await self.raw(f'USER {identity.username} 0 * :{identity.realname}')
 				await self.raw('NICK ' + identity.nickname)
 			except Exception as ex:
@@ -114,6 +112,7 @@ class Bot():
 				elif args[0] == 'PING':
 					await self.raw('PONG '+args[1][1:])
 				elif args[1] == '001':
+					await asyncio.sleep(5)
 					if connection.modes:
 						await self.raw(f'MODE {identity.nickname} +{connection.modes}')
 					if identity.nickserv:
@@ -124,9 +123,9 @@ class Bot():
 					error('The bot is already running or nick is in use.')
 			except (UnicodeDecodeError, UnicodeEncodeError):
 				pass
-			except Exception as ex:
-				error('fatal error occured', ex)
-				break
+#			except Exception as ex:
+#				error('fatal error occured', ex)
+#				break
 			finally:
 				self.last = time.time()
 
