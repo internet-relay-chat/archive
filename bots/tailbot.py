@@ -118,8 +118,6 @@ class Bot():
 						await self.raw(f'MODE {identity.nickname} +{connection.modes}')
 					if identity.nickserv:
 						await self.sendmsg('NickServ', f'IDENTIFY {identity.nickname} {identity.nickserv}')
-					if identity.operator:
-						await self.raw('OPER hates {identity.operator}')
 					await self.raw(f'JOIN {connection.channel} {connection.key}') if connection.key else await self.raw('JOIN ' + connection.channel)
 					self.loops['tail'] = asyncio.create_task(self.loop_tail())
 				elif args[1] == '433':
