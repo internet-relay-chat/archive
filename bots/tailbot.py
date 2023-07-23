@@ -123,9 +123,9 @@ class Bot():
 					error('The bot is already running or nick is in use.')
 			except (UnicodeDecodeError, UnicodeEncodeError):
 				pass
-#			except Exception as ex:
-#				error('fatal error occured', ex)
-#				break
+			except Exception as ex:
+				error('fatal error occured', ex)
+				break
 			finally:
 				self.last = time.time()
 
