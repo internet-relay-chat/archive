@@ -67,8 +67,7 @@ class Bot():
 			async with aiofiles.open(FIFO_PATH) as fifo:
 				while True:
 					try:
-						log_line = FIFO_PATH.read_text()
-						for line in log_line.splitlines():
+						for line in fifo:
 							await self.sendmsg(connection.channel, log_line)
 							await asyncio.sleep(0.1)
 					except Exception as ex:
