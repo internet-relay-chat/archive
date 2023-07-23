@@ -66,15 +66,18 @@ class Bot():
 		while True:
 			async with aiofiles.open(FIFO_PATH) as fifo:
 				while True:
-#					try:
-						await self.sendmsg(connection.channel, FIFO_PATH.read_text())
-#					except Exception as ex:
-#						try:
-#							await self.irc_error(connection.channel, 'Error occured in the loop_tail function!', ex)
-#							break
-#						except:
-#							error('Fatal error occured in the loop_tail functions!', ex)
-#							break
+					try:
+						log_line = FIFO_PATH.read_text()
+						for line in log_line.splitlines():
+							await self.sendmsg(connection.channel, log_line)
+							await asyncio.sleep(0.1)
+					except Exception as ex:
+						try:
+							await self.irc_error(connection.channel, 'Error occured in the loop_tail function!', ex)
+							break
+						except:
+							error('Fatal error occured in the loop_tail functions!', ex)
+							break
 
 	async def connect(self):
 		while True:
@@ -123,9 +126,9 @@ class Bot():
 					error('The bot is already running or nick is in use.')
 			except (UnicodeDecodeError, UnicodeEncodeError):
 				pass
-#			except Exception as ex:
-#				error('fatal error occured', ex)
-#				break
+			except Exception as ex:
+				error('fatal error occured', ex)
+				break
 			finally:
 				self.last = time.time()
 
