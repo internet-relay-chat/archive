@@ -65,7 +65,7 @@ class Bot():
 		await self.sendmsg(chan, '[{0}] {1} {2}'.format(color('ERROR', red), msg, color(f'({reason})', grey))) if reason else await self.sendmsg(chan, '[{0}] {1}'.format(color('ERROR', red), msg))
 
 	async def loop_tail(self):
-		if not os.path.exists(FIFO_PATH)
+		if not os.path.exists(FIFO_PATH):
 			os.mkfifo(FIFO_PATH)
 		while True:
 			with open(FIFO_PATH) as fifo:
