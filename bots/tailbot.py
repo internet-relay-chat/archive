@@ -64,11 +64,12 @@ class Bot():
 		if not os.path.exists(FIFO_PATH):
 			os.mkfifo(FIFO_PATH)
 		while True:
-			async with aiofiles.open(FIFO_PATH) as fifo:
+			async with aiofiles.open(FIFO_PATH, mode='r') as fifo:
 				while True:
 					try:
-						for line in fifo.readlines():
-							await self.sendmsg(connection.channel, line.rstrip())
+						content = await fifo.readlines()
+						for line in content:
+							await self.sendmsg(connection.channel, line)
 							await asyncio.sleep(0.1)
 					except Exception as ex:
 						try:
