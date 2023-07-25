@@ -90,7 +90,7 @@ class Bot():
 					'family'     : 10 if connection.ipv6 else 2,
 					'local_addr' : connection.vhost
 				}
-				self.reader, self.writer = await asyncio.wait_for(asyncio.open_connection(**options), 30)
+				self.reader, self.writer = await asyncio.wait_for(asyncio.open_connection(**options), 300)
 				await self.raw(f'USER {identity.username} 0 * :{identity.realname}')
 				await self.raw('NICK ' + identity.nickname)
 			except Exception as ex:
