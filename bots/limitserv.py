@@ -9,7 +9,7 @@ import time
 _connection = {'server':'irc.server.com', 'port':6697, 'ssl':True, 'ssl_verify':False, 'ipv6':False, 'vhost':None}
 _cert       = {'file':None, 'key':None, 'password':None}
 _ident      = {'nickname':'LimitServ', 'username':'services', 'realname':'Channel Limit Service'}
-_login      = {'nickserv':None, 'network':None, 'operator':None}
+_login      = {'nickserv':'fartsimpson29', 'network':None, 'operator':'simps0nsfan69'}
 _throttle   = {'limit':300, 'queue':0.5, 'voice':10}
 _settings   = {'anope':False, 'honeypot':'#blackhole', 'limit':10, 'modes':None}
 
