@@ -1,0 +1,2 @@
+#Triggers file version 1.0+
+-privmsgs -privactions -privnotices -privctcps -dcc_msgs -dcc_actions -dcc_ctcps -invites -tags 'supernets' -command 'MSG blackhole $N'

@@ -1,0 +1,181 @@
+servers = (
+  { address = "localhost"; chatnet = "supernets"; port = "6697"; autoconnect = "no"; use_ssl = "yes";  ssl_cert = "~/.irssi/certs/blackhole.pem"; }
+);
+
+chatnets = {
+  supernets = { type = "IRC"; autosendcmd = "/^msg nickserv identify CHANGEME; wait 2000; /^oper blackhole *"; };
+};
+
+channels = (
+  { name = "#christ";    chatnet = "supernets"; autojoin = "yes"; },
+  { name = "#dev";       chatnet = "supernets"; autojoin = "yes"; },
+  { name = "#help";      chatnet = "supernets"; autojoin = "yes"; },
+  { name = "#pumpcoin";  chatnet = "supernets"; autojoin = "yes"; },
+  { name = "#scroll";    chatnet = "supernets"; autojoin = "yes"; },
+  { name = "#superbowl"; chatnet = "supernets"; autojoin = "yes"; },
+  { name = "#tor";       chatnet = "supernets"; autojoin = "yes"; },
+  { name = "#tunes";     chatnet = "supernets"; autojoin = "yes"; }
+);
+
+aliases = {
+  alimit         = "foreach channel /limit";
+  acslimit       = "foreach channel /cslimit";
+  blackhole_kick = "eval KICK $0 $1 \00308,04          E N T E R   T H E   V O I D          \017";
+  blackhole_kill = "eval KILL $0 \00308,04          E N T E R   T H E   V O I D          \017";
+  wc             = "window close";
+};
+
+statusbar = {
+  items = {
+    barstart = "{sbstart}";
+    barend = "{sbend}";
+    topicbarstart = "{topicsbstart}";
+    topicbarend = "{topicsbend}";
+    time = "";
+    user = "";
+    window = "";
+    window_empty = "";
+    prompt = "{prompt $[.15]itemname@$tag}";
+    prompt_empty = "{prompt $winname}";
+    topic = " $topic";
+    topic_empty = "";
+    act = "";
+    lag = "";
+    more = "-- more --";
+  };
+  default = {
+    window = {
+      disabled = "yes";
+      type = "window";
+      placement = "bottom";
+      position = "1";
+      visible = "active";
+      items = {
+        barstart = { priority = "100"; };
+        time = { };
+        user = { };
+        window = { };
+        window_empty = { };
+        lag = { priority = "-1"; };
+        more = { priority = "-1"; alignment = "right"; };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
+    window_inact = {
+      type = "window";
+      placement = "bottom";
+      position = "1";
+      visible = "inactive";
+      items = {
+        barstart = { priority = "100"; };
+        window = { };
+        window_empty = { };
+        more = { priority = "-1"; alignment = "right"; };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+      disabled = "yes";
+    };
+    prompt = {
+      type = "root";
+      placement = "bottom";
+      position = "100";
+      visible = "always";
+      items = {
+        prompt = { priority = "-1"; };
+        prompt_empty = { priority = "-1"; };
+        colours = { alignment = "right"; };
+        input = { priority = "10"; };
+      };
+    };
+    topic = {
+      type = "root";
+      placement = "top";
+      position = "1";
+      visible = "always";
+      items = {
+        topicbarstart = { priority = "100"; };
+        topic = { };
+        topic_empty = { };
+        topicbarend = { priority = "100"; alignment = "right"; };
+      };
+    };
+    inact = { items = { }; disabled = "yes"; };
+    awl_0 = {
+      items = {
+        barstart = { priority = "100"; };
+        awl_0 = { };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
+  };
+};
+
+settings = {
+  core = {
+    nick = "blackhole";
+    quit_message = "G-line: User has been permanently banned from this network.";
+    real_name = "ENTER THE VOID";
+    settings_autosave = "yes";
+    timestamp_format = "%I:%M";
+    user_name = "BL";
+    server_reconnect_time = "5min";
+    recode_fallback = "UTF-8";
+    recode_out_default_charset = "UTF-8";
+    recode_transliterate = "yes";
+    recode = "yes";
+    recode_autodetect_utf8 = "yes";
+    awaylog_level = "hilight";
+    awaylog_file = "~/.irssi/logs/away.log";
+  };
+  "fe-text" = { actlist_sort = "refnum"; };
+  "irc/core" = {
+    alternate_nick = "blackhole_";
+    channel_sync = "yes";
+    cmds_max_at_once = "0";
+    cmd_queue_speed = "0";
+    ctcp_version_reply = "?";
+    ctcp_userinfo_reply = "?";
+    max_ctcp_queue = "0";
+    part_message = "G-line: User has been permanently banned from this network.";
+    usermode = "+ix";
+    skip_motd = "yes";
+    ban_type = "host";
+    kick_first_on_kickban = "yes";
+  };
+  "irc/flood" = { flood_timecheck = "0"; flood_max_msgs = "0"; };
+  "fe-common/core" = {
+    show_names_on_join = "no";
+    beep_msg_level = "MSGS HILIGHT";
+    term_charset = "UTF-8";
+    max_command_history = "25";
+    autolog_path = "~/.irssi/logs/$tag/$0.log";
+    autocreate_query_level = "MSGS";
+    activity_hilight_level = "MSGS";
+    beep_when_away = "no";
+    beep_when_window_active = "no";
+    hilight_level = "PUBLIC";
+  };
+  "perl/core/scripts" = {
+    nickcolor_colors = "3 5 6 7 10 11 12 13 14";
+    awl_shared_sbar = "OFF";
+    awl_block = "-14";
+    awl_viewer = "no";
+    awl_prefer_name = "yes";
+    awl_sbar_maxlength = "yes";
+    chansort_autosort = "yes";
+    awl_mouse = "yes";
+  };
+};
+
+windows = { 1 = { immortal = "yes"; name = "status"; level = "ALL"; }; };
+mainwindows = { 1 = { first_line = "7"; lines = "13"; }; };
+logs = { };
+keyboard = ( 
+  { key = "meta-[M"; id = "command"; data = "mouse_xterm"; }
+);
+ignores = (
+  { mask = "*!*@services.supernets.org"; level = "CRAP MSGS PUBLICS NOTICES SNOTES CTCPS ACTIONS MODES TOPICS WALLOPS INVITES NICKS DCC DCCMSGS CLIENTNOTICES CLIENTCRAP CLIENTERRORS HILIGHTS"; servertag = "supernets"; },
+  { mask = "*!*@super.nets";             level = "CRAP MSGS PUBLICS NOTICES SNOTES CTCPS ACTIONS MODES TOPICS WALLOPS INVITES NICKS DCC DCCMSGS CLIENTNOTICES CLIENTCRAP CLIENTERRORS HILIGHTS"; servertag = "supernets"; },
+  { mask = "*!*@super.nets.bot";         level = "CRAP MSGS PUBLICS NOTICES SNOTES CTCPS ACTIONS MODES TOPICS WALLOPS INVITES NICKS DCC DCCMSGS CLIENTNOTICES CLIENTCRAP CLIENTERRORS HILIGHTS"; servertag = "supernets"; },
+  { mask = "*!*@super.nets.link";        level = "CRAP MSGS PUBLICS NOTICES SNOTES CTCPS ACTIONS MODES TOPICS WALLOPS INVITES NICKS DCC DCCMSGS CLIENTNOTICES CLIENTCRAP CLIENTERRORS HILIGHTS"; servertag = "supernets"; }
+);

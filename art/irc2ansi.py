@@ -84,8 +84,9 @@ if __name__ == '__main__':
 				with open(path, 'rb') as art_file:
 					data = art_file.read()
 					enc  = chardet.detect(data)['encoding']
-					for line in IRC2ANSI(data.decode(enc)).split('\n'):
-						print(line)
+					lines = IRC2ANSI(data.decode(enc)).split('\n')
+					for line in lines:
+						print(line + ' ' + str(len(line)))
 						time.sleep(0.05)
 
 			if os.path.isdir(option):

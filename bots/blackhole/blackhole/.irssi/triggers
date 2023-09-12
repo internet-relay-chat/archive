@@ -1,0 +1,8 @@
+#Triggers file version 1.0+
+-privmsgs -masks 'CHANGEME1!CHAGEME1@CHANGEME1' -tags 'supernets' -command 'blackhole_kill $M'
+-privmsgs -masks 'CHANGEME2!CHAGEME2@CHANGEME2' -tags 'supernets' -command 'blackhole_kill $M'
+-privmsgs -masks 'CHANGEME3!CHAGEME3@CHANGEME3' -tags 'supernets' -command 'blackhole_kill $M'
+-kicks -tags 'supernets' -other_masks 'CHANGEME1!CHAGEME1@CHANGEME1' -command 'blackhole_kick $C $N'
+-kicks -tags 'supernets' -other_masks 'CHANGEME2!CHAGEME2@CHANGEME2' -command 'blackhole_kick $C $N'
+-kicks -tags 'supernets' -other_masks 'CHANGEME3!CHAGEME3@CHANGEME3' -command 'blackhole_kick $C $N'
+-publics -pubactions -pubnotices -pubctcps -nocase -tags 'supernets' -regexp '^.*(nick1|nick2|nick3).*$' -command 'blackhole_kick $C $N'
