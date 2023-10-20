@@ -86,7 +86,7 @@ if __name__ == '__main__':
 					enc  = chardet.detect(data)['encoding']
 					lines = IRC2ANSI(data.decode(enc)).split('\n')
 					for line in lines:
-						print(line + ' ' + str(len(line)))
+						print(line)
 						time.sleep(0.05)
 
 			if os.path.isdir(option):
